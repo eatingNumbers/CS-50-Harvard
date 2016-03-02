@@ -11,7 +11,8 @@ int main() {
 	return 0;
 */
 	float a;
-	a = 0;
+	printf("What fahrenheit temperature do you want to convert to celsius?");
+	scanf("%f", &a);
 	while (a <= 100) {
 		printf("%6.2f degrees F = %6.2f degrees C\n",
 				a, (a - 32.0) * 5.0 / 9.0);
