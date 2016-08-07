@@ -6,6 +6,8 @@
 *.DS_Store
 *.swp
 *.un?
+*~
+~*
 
 # Precompiled Headers
 *.gch
