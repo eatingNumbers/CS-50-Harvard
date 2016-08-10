@@ -1,80 +1,79 @@
 /* Displays digit input from user to English equivalent of the number.*/
 
 #include <stdio.h>
+#include <math.h>
 
 int main() {
 
-    float a = -.12345;
-    float b = a * -10;
-    float c = b - 1;
-    float d = c * -10 * -1;
-    float e = d - 2;
-
-    printf("%f\n", e);
-
-    float newNumber, myNumber, rightDigit;
-    int toInt; 
+    long double newNumber, myNumber, showNumber;
 
     printf("What number would you like to convert to its English equivalent?\n");
-    scanf("%f", &myNumber);
+    scanf("%Lf", &myNumber);
 
-    while (myNumber > 1) {
-    rightDigit = (int)  myNumber % 10;
-    myNumber = myNumber / 10;       
-    newNumber = myNumber;
-    /* printf("New number in first while loop is %f\n", newNumber); */
-    }
+
+    if (myNumber == 0)
+        printf("zero");
+
     
-    /* printf("New number before do while loop is %f\n", newNumber); */
+    while (myNumber > 1) {
+        myNumber = myNumber / 10;       
+
+    }
+
+    newNumber = myNumber;
 
     do {
 
-           newNumber *= - 10;
-           /* newNumber *= -1; */
-           printf("newNumber at the top is %f\n", newNumber);
-           toInt = (int) newNumber;
-           printf("To int is %i\n", toInt);
-           
-           if (toInt == -1) {
-                printf("one "); 
-                newNumber = toInt - newNumber;
-                printf("newNumber at one is %f\n", newNumber);
-           } else if (toInt == 2) {
-                printf("two "); 
-                newNumber = newNumber - toInt;
-                printf("newNumber at two after subtraction is %f", newNumber);
-           } else if (toInt == 3) {
-                printf("three "); 
-                newNumber = newNumber - toInt;
-           } else if (toInt == 4) {
-                printf("four "); 
-                newNumber = newNumber - toInt;
-           } else if (toInt == 5) {
-                printf("five ");
-                newNumber = newNumber - toInt;
-           } else if (toInt == 6) {
-                printf("six "); 
-                newNumber = newNumber - toInt;
-           } else if (toInt == 7) {
-                newNumber = newNumber - toInt;
-                printf("seven "); 
-           } else if (toInt == 8) {
-                newNumber = newNumber - toInt;
-                printf("eight "); 
-           } else if (toInt == 9) {
-                newNumber = newNumber - toInt;
-                printf("nine "); 
-           } 
-           else
-                   printf("zero ");
-       
-            printf("\nNew number at the bottom of the do while loop is %f\n", newNumber);
+           newNumber = newNumber * 10;
+           showNumber = floorf(newNumber * 100/100);           
 
-    } while (newNumber > 0.09); {
+           if ((showNumber == 0 && newNumber == 0) || showNumber == -1) { 
+                break;
+           }
+
+           if (showNumber == 1) {
+                printf("one "); 
+                newNumber = newNumber - showNumber ;
+
+           } else if (showNumber == 2) {
+                printf("two "); 
+                newNumber = newNumber - showNumber;
+
+           } else if (showNumber == 3) {
+                printf("three "); 
+                newNumber = newNumber - showNumber;
+
+           } else if (showNumber == 4) {
+                printf("four "); 
+                newNumber = newNumber - showNumber;
+
+           } else if (showNumber == 5) {
+                printf("five ");
+                newNumber = newNumber - showNumber;
+
+           } else if (showNumber == 6) {
+                printf("six "); 
+                newNumber = newNumber - showNumber;
+           } else if (showNumber == 7) {
+                printf("seven "); 
+                newNumber = newNumber - showNumber;
+
+           } else if (showNumber == 8) {
+                printf("eight "); 
+                newNumber = newNumber - showNumber;
+
+           } else if (showNumber == 9) {
+                printf("nine "); 
+                newNumber = newNumber - showNumber;
+
+           } else if (newNumber > 0.000009 && showNumber == 0) {
+                   printf("zero ");
+
+           } 
+
+    } while ((showNumber != 0 && newNumber != 0) || (showNumber == 0 && newNumber > 0.000009)); {
     
         printf("\n");
-        /* printf("To int at the end is %i\n", toInt); */
-        /* printf("New number at the end is %f\n", newNumber); */
 
     }
 
