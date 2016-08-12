@@ -36,6 +36,5 @@
 
 # Debug files
 *.dSYM/
-
 *.md
-
+test*
