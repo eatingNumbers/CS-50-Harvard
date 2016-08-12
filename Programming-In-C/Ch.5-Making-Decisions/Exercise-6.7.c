@@ -16,13 +16,13 @@ int main (void) {
     for ( p = 3; p <= primeNumber; p += 2 ) {
         isPrime = 1;
 
-        for ( d = 2; d < p && isPrime != 0; ++d ) {
+        for ( d = 2; d < p && isPrime == 1; ++d ) {
             if ( p % d == 0 )
                 isPrime = 0;
 
         }
 
-        if ( isPrime != 0 )
+        if ( isPrime == 1 )
             printf("%i ", p);
 
     }
