@@ -4,13 +4,9 @@ int main() {
 
     int ratingCounters[999], i, response, counter = 0;
 
-    /* for (i = 1; i <= 10; i++) { */
-    /*     ratingCounters[i] = 0; */
-    /* } */
-
     printf("Enter your responses\n");
 
-    for (i = 1; i <= 10; i++) {
+    for (i = 1; i < counter + 2; i++) {
         scanf("%i", &response);
 
         if (response == 999)

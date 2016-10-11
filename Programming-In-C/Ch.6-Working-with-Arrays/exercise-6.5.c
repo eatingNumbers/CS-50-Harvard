@@ -8,11 +8,13 @@ int main (void) {
     int i, j;
 
     for (j = 0; j < 10; ++j) {
-        /* printf("j = %d and i = %d\n", j, i); */
-        printf("numbers = %d\n", numbers[i]);
+        printf("first loop\n");
+        /* printf("j is %d and i is %d\n", j, i); */
+        /* printf("numbers = %d\n", numbers[i]); */
         for (i = 0; i < j; ++i) {
             numbers[j] += numbers[i];
             printf("j = %d and i = %d\n", j, i);
+            printf("second loop numbers = %d\n", numbers[j]);
 
         }
     }
@@ -24,3 +26,4 @@ int main (void) {
 
     return 0;
 }
+

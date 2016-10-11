@@ -4,16 +4,16 @@
 
 int main() {
 
-    int Fibonacci[15], i;
+    int F0 = 0, F2 = 1, F3, i;
 
-    Fibonacci[0] = 0; // By definition
-    Fibonacci[1] = 1; // Ditto
+    for (i = 0; i < 15; ++i) {
 
-    for (i = 2; i < 15; ++i) 
-        Fibonacci[i] = Fibonacci[i-2] + Fibonacci[i-1];
+        F3 = F0 + F2;
+        F0 = F2;
+        F2 = F3;
+        printf("%i\n", F3);
 
-    for (i = 0; i < 15; ++i)  
-        printf("%i\n", Fibonacci[i]);
+    }
 
     return 0;
 
