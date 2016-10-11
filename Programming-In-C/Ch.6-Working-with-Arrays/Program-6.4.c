@@ -14,10 +14,7 @@ int main(void) {
     for (p = 5; p <= 50; p = p + 2) {
         isPrime = true;
 
-        printf("p is %i", p);
-        printf("primes is %i\n", *primes);
-        printf("primeIndex is %i\n", primeIndex);
-
+        
         for (i = 1; isPrime && p/primes[i] >= primes[i]; i++)
            if (p % primes[i] == 0)
               isPrime = false;
@@ -26,6 +23,10 @@ int main(void) {
           primes[primeIndex] = p;
           primeIndex++;
 
+        printf("p is %i", p);
+        printf("primes is %i\n", *primes);
+        printf("primeIndex is %i\n", primeIndex);
+
         printf("i is %i\n", i);
 
        }
@@ -33,8 +34,10 @@ int main(void) {
     } 
 
     for (i = 0; i < primeIndex; i++)
-        printf("%i\n ", primes[i]);
+        printf("%i ", primes[i]);
 
-    printf("\n");
+    /* printf("\n"); */
+
+    return 0;
 
 }
