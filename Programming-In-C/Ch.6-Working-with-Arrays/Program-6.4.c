@@ -23,8 +23,8 @@ int main(void) {
           primes[primeIndex] = p;
           primeIndex++;
 
-        printf("p is %i", p);
-        printf("primes is %i\n", *primes);
+        printf("p is %i\n", p);
+        printf("primes is %i\n", primes[i]);
         printf("primeIndex is %i\n", primeIndex);
 
         printf("i is %i\n", i);
@@ -34,7 +34,7 @@ int main(void) {
     } 
 
     for (i = 0; i < primeIndex; i++)
-        printf("%i ", primes[i]);
+        printf("%i\n ", primes[i]);
 
     /* printf("\n"); */
 

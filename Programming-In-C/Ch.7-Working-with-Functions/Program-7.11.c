@@ -18,7 +18,7 @@ int main() {
     multiplyBy2(floatVals, 4);
 
     for (i = 0; i < 4; i++)
-        printf("%.2f ", floatVals[i]);
+        printf("%.2f\n", floatVals[i]);
 
     printf("\n");
 
