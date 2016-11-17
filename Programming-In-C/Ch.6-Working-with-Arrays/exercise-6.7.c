@@ -18,4 +18,23 @@
 
 /* 8. Find out if your compiler supports variable-length arrays. If it does, write a small program to test the feature out. */
 
+#include <stdio.h>
 
+int main() {
+
+    int n = 150, P[n], i;
+
+    for (i = 0; i < n; i++) 
+        P[i] = 0;
+    
+    for (i = 2; i < n; i++) {
+    
+        if (i > n)
+            break;
+        if (P[i] == 0)
+            printf("%i", P[i]);
+    
+    }
+
+
+}
