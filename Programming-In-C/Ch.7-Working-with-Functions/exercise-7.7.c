@@ -18,13 +18,13 @@ long int x_to_the_n(int x, int n) {
 
 int main() {
 
-long int x_to_the_n(int x, int n);
-int x, n;
+    long int x_to_the_n(int x, int n);
+    int x, n;
 
-printf("Give me an integer and another for the power: ");
-scanf("%i %i", &x, &n);
+    printf("Give me an integer and another for the power: ");
+    scanf("%i %i", &x, &n);
 
-printf("Result = %ld\n", x_to_the_n(x, n));
+    printf("Result = %ld\n", x_to_the_n(x, n));
 
-return 0;
+    return 0;
 }

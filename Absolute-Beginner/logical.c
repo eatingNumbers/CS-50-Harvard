@@ -8,7 +8,6 @@ each other. */
 
 #include <stdio.h>
 
-
 int main()
 {
   // set up some common integers for the program
